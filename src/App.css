@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+header {
+  position: relative;
+  background-color: #263859;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.app:has(.contact-main) {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app:has(.contact-main) main {
+  flex: 1;
+} 
+
+.app:has(.return-home) {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app:has(.return-home) main {
+  flex: 1;
+}
+
+.blog-post,
+.comments,
+#about {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #00000010;
+}
+
+.blog-post h2 {
+  color: #263859;
+}
+
+.return-home-link {
+  display: inline-block;
+  background-color: #1f2937;
+  color: white;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.return-home-link:hover {
+  background-color: #405b85;
+}
+
+.post-info {
+  color: #777;
+  font-size: 14px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+button {
+  background-color: #1f2937;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #405b85;
+}
+
+.comment {
+  background-color: #f5f6fa;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #263859;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 20px auto;
+  }
+
+  .theme-toggle {
+    position: static;
+    margin-top: 15px;
+  }
+
+  nav a {
+    margin: 0 8px;
+  }
+}
+
+/* Like Button */
+
+.like-button {
+  background-color: #e8edf5;
+  color: #263859;
+  border: 1px solid #263859;
+  padding: 10px 18px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.like-button:hover {
+  background-color: #d4deed;
+}
+
+/* Dark Mode */
+.app.dark {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.app.dark header {
+  background-color: #1f2937;
+}
+
+.app.dark .blog-post,
+.app.dark .comments,
+.app.dark #about {
+  background-color: #1f2937;
+  color: #f5f5f5;
+}
+
+.app.dark .blog-post h2 {
+  color: #93c5fd;
+}
+
+.app.dark .post-info {
+  color: #ccc;
+}
+
+.app.dark textarea {
+  background-color: #1f2937;
+  color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+.app.dark button {
+  background-color: #406682;
+  color: #ffffff;  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+  }
+}
+
+.app.dark button:hover {
+  background-color: #588eb3;
+}
+
+.app.dark .comment {
+  background-color: #1f2937;
+  color: #f5f5f5;
+}
+
+.app.dark footer {
+  background-color: #1f2937;
+  color: #f5f5f5;
+}
+
+.app.dark .return-home-link,
+.app.dark .return-home-link:visited {
+  color: #bde3fe;
+}
+
+.app.dark .return-home-link:hover {
+  color: #ffffff;
+}
+
+.app.dark .view-post:visited {
+  color: #bde3fe;
+}
+.app.dark .view-post:hover {
+  color: #ffffff;
+}
